@@ -1,6 +1,7 @@
 %main.m
 ball1 = Ball()
-for i=1:1000
+hold on
+for i=1:100
     moveBall(ball1);
-    plot(ball1.x_pos, ball1.y
+    plot(ball1.pos_x, ball1.pos_y, );
 end
