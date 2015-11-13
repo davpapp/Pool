@@ -3,13 +3,13 @@ clf
 ball1 = Ball()
 ball2 = Ball()
 ball2.pos_x = 80;
-ball2.pos_y = 40;
-ball.v_d = 5;
-ball
+ball2.pos_y = 70;
+ball2.v_d = 5;
+ball2.v_theta = 0;
 hold on
+array = [ball1 ball2];
 for i=1:100
-    ball1 = moveBall(ball1);
-    ball2 = moveBall(ball2);
-    plot(ball1.pos_x, ball1.pos_y, 'ro');
-    plot(ball2.pos_x, ball2.pos_y, 'bo');
+    if (ball1.in_play)
+        ball1 = moveBall();
+        ball1 = checkTableCollisions
 end
