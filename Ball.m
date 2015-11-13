@@ -1,3 +1,4 @@
 function res = Ball()
-    res = 0;
+    ball_radius = 0.05715 / 2;
+    ball_mass = 0.170; %kg
 end
