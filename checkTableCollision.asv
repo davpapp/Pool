@@ -9,7 +9,7 @@ function ball = checkTableCollision (ball)
         end
   
        % Middle pockets
-    if (ball.pos_x > 3.5 && ball.pos_x < 48.25 && ball.pos_x > 48.25) && (ball.pos_y < 3.5 || ball.pos_y > 46.5)
+    if (ball.pos_x < 51.75 && ball.pos_x > 48.25) && (ball.pos_y < 3.5 || ball.pos_y > 46.5)
         ball.in_play = false;
     else ball.in_play = true;
     end
