@@ -3,15 +3,28 @@ function ball = checkTableCollision (ball)
 
     if (ball.pos_x < 3.5 || ball.pos_x > 96.5) 
         if (ball.pos_y < 3.5 || ball.pos_y > 46.5)
-        ball.in_play = false;
-        else 
-        ball.in_play = true;
+            ball.in_play = false;
+        else
+            if (ball.v_theta < 180)
+                ball.v_theta = mod(ball.v_theta, 90);
+            else
+                ball.v_theta = -mod(ball.v_theta, 90);
+            end
+            
+            %ball.v_d = 10;
         end
-  
-       % Middle pockets
-    if (ball.pos_x > 3.5 && ball.pos_x < 48.25 && ball.pos_x > 48.25) && (ball.pos_y < 3.5 || ball.pos_y > 46.5)
-        ball.in_play = false;
-    else ball.in_play = true;
+    end
+    % Middle pockets
+    if (ball.pos_y < 3.5 || ball.pos_y > 96.5)
+        if (ball.pos_x > 46.5 && ball.pos_x < 53.5)
+            ball.in_play = false;
+        else
+            if (ball.v_theta < 180)
+                ball.v_theta = mod(ball.v_theta, 90);
+            else
+                ball.v_theta = -mod(ball.v_theta, 90);
+            end
+        end
     end
  end
    
