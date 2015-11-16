@@ -1,19 +1,22 @@
 %main.m
 clf
-ball1 = Ball(50, 20, 3, pi/3.5);
-ball2 = Ball(50, 80, 2, -pi/4);
-ball3 = Ball(50, 50, 5, 2*pi/3);
+ball1 = Ball(50, 20, 5, pi/2, 'ro');
+ball2 = Ball(20, 30, 5, 0, 'bo');
+ball3 = Ball(50, 50, 5, 2*pi/3, 'go');
 hold on
-array = [ball1 ball2 ball3];
+array = [ball1 ball2];% ball3];
 
-for i=1:1000
+axis([0 100 0 100]);
+
+for i=1:100
     for j=1:length(array)
        if (array(j).in_play)
            array(j) = moveBall(array(j));
            array(j) = checkTableCollision(array(j));
            array = checkCollision(array, j);
-           plot(array(j).pos_x, array(j).pos_y, 'ro');
-           
+           plot(array(j).pos_x, array(j).pos_y, array(j).color);
+           drawnow
+           pause(.1);
        end
     end
     
