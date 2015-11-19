@@ -1,7 +1,7 @@
 %main.m
 clf
 ball1 = Ball(20, 40, 1, 0, 'ro');
-ball2 = Ball(40, 20, 1, pi/2, 'bo');
+ball2 = Ball(40, 20, 0, 1, 'bo');
 ball3 = Ball(50, 50, 0.5, 2*pi/3, 'go');
 ball4 = Ball(61, 75, 2, -pi/4, 'ro');
 ball5 = Ball(91, 16, 1.2, 15/7, 'ro');
@@ -18,7 +18,7 @@ array = [ball1 ball2] %ball3 ball4 ball5] %ball6 ball7 ball8 ball9 ball10 ball11
 
 axis([0 100 0 100]);
 
-for i=1:200
+for i=1:50
     %array = checkCollision(array);
     for j=1:length(array)
        if (array(j).in_play)
