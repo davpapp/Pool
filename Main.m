@@ -14,11 +14,11 @@ ball11 = Ball(7, 5, 1, 74, 'ro');
 ball12 = Ball(50, 91, 1, 13, 'ro');
 
 hold on
-array = [ball1 ball2] %ball3 ball4 ball5] %ball6 ball7 ball8 ball9 ball10 ball11 ball12];
+array = [ball1 ball2 ball3 ball4 ball5 ball6 ball7 ball8 ball9 ball10 ball11 ball12];
 
 axis([0 100 0 100]);
 
-for i=1:50
+for i=1:200
     %array = checkCollision(array);
     for j=1:length(array)
        if (array(j).in_play)
