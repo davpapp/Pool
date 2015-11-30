@@ -63,25 +63,20 @@ for i = 1:length(array)
 
                     v1 = [array(i).vx array(i).vy];
                     v2 = [array(j).vx array(j).vy];
-                    x1 = [array(i).pos_x array(i).pos_y];
-                    x2 = [array(j).pos_y array(j).pos_y];
-                    v = x1 - x2;
-                    v_2 = x2 - x1;
-                    sv = v.^2;
-                    sv_2 = v.^2;
-                    dv = sum(sv);
-                    dv_2 = sum(sv_2);
-                    mag = sqrt(dv);
-                    mag_2 = sqrt(dv_2);
-                    v1prime = v1 - (x1 - x2) * dot(v1 - v2, x1 - x2) / mag^2;
-                    v2prime = v2 - (x2 - x1) * dot(v2 - v1, x2 - x1) / mag_2^2;
+                    x1 = [array(i).pos_x array(i).pos_y]
+                    x2 = [array(j).pos_y array(j).pos_y]
+                    den1 = norm(x1 - x2);
+                    den2 = norm(x2 - x1);
+                   
+                    v1prime = v1 - (x1 - x2) * dot(v1 - v2, x1 - x2) / den1^2;
+                    v2prime = v2 - (x2 - x1) * dot(v2 - v1, x2 - x1) / den2^2;
                     
                     array2(i).vx = v1prime(1);
                     array2(i).vy = v1prime(2);
                     array2(j).vx = v2prime(1);
                     array2(j).vy = v2prime(2);
-                    array2(i).pos_x = array2(i).pos_x + 5;
-                    array2(i).pos_y = array2(i).pos_y + 5;
+                    %array2(i).pos_x = array2(i).pos_x + 5;
+                    %array2(i).pos_y = array2(i).pos_y + 5;
                     
                   %  array2(i).pos_x = array2(i).pos_x + v1prime(1) * 3;
                   %  array2(i).pos_y = array2(i).pos_y + v1prime(2) * 3;
