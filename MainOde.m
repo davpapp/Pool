@@ -1,7 +1,6 @@
 %MainOde
 clf
 hold on
-global indexes
 
 ball1 = Ball(20, 40, 1, 2, 'r');
 ball2 = Ball(50, 60, 2, 1, 'b');
