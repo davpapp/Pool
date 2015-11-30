@@ -74,8 +74,8 @@ for i = 1:length(array)
                     array2(i).vy = v1prime(2);
                     array2(j).vx = v2prime(1);
                     array2(j).vy = v2prime(2);
-                    array2(i).pos_x = array2(i).pos_x + 5;
-                    array2(i).pos_y = array2(i).pos_y + 5;
+                   % array2(i).pos_x = array2(i).pos_x + 5;
+                   % array2(i).pos_y = array2(i).pos_y + 5;
                     
                   %  array2(i).pos_x = array2(i).pos_x + v1prime(1) * 3;
                   %  array2(i).pos_y = array2(i).pos_y + v1prime(2) * 3;
