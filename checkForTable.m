@@ -1,4 +1,4 @@
-function ball = checkTableCollision (ball)
+function ball = checkForTable(ball)
 % Pocket Formation and taking the ball out of play
 
     if (ball.pos_x < 3.5 || ball.pos_x > 96.5)
