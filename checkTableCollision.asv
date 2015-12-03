@@ -11,7 +11,7 @@ function ball = checkTableCollision (ball)
     end
     
     if (ball.pos_y > 96.5 || ball.pos_y < 3.5)
-       if (ball.pos_x < 3.5 || ball.pos_x > 196.5 || (ball.pos_x > 98.25 && ball.pos_x < 101.75))
+       if (ball.pos_x < 3.5 || ball.pos_x > 196.5 || (ball.pos_x > 9 && ball.pos_x < 53.5))
           ball.in_play = false;
        else
            ball.vy = -ball.vy;
