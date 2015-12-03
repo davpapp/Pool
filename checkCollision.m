@@ -43,8 +43,6 @@ for k = 1:length(addIndexes)
     array2(indexValue).vx = 0;
     array2(indexValue).vy = 0;
 end    
-addIndexes;
-addx;
 for q = 1:length(addIndexes)
     indexValue2 = addIndexes(q);
     array2(indexValue2).vx = array2(indexValue2).vx + addx(q);

@@ -1,7 +1,7 @@
 function ball = checkTableCollision (ball)
 % Pocket Formation and taking the ball out of play
 
-    if (ball.pos_x < 3.5 || ball.pos_x > 96.5)
+    if (ball.pos_x < 3.5 || ball.pos_x > 196.5)
         if (ball.pos_y < 3.5 || ball.pos_y > 96.5)
             ball.in_play = false;
         else
@@ -11,7 +11,7 @@ function ball = checkTableCollision (ball)
     end
     
     if (ball.pos_y > 96.5 || ball.pos_y < 3.5)
-       if (ball.pos_x < 3.5 || ball.pos_x > 96.5 || (ball.pos_x > 46.5 && ball.pos_x < 53.5))
+       if (ball.pos_x < 3.5 || ball.pos_x > 196.5 || (ball.pos_x > 96.5 && ball.pos_x < 103.5))
           ball.in_play = false;
        else
            ball.vy = -ball.vy;

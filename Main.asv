@@ -1,8 +1,8 @@
 %main.m
 clf
-ball1 = Ball(30, 53, 2, 0, 'ro');
+ball1 = Ball(30, 53, 0.7, 0, 'ro');
 ball2 = Ball(50, 50, 0, 0, 'bo');
-ball3 = Ball(50, 56, 0, 0, 'go');
+ball3 = Ball(50, 0, 0, 0, 'go');
 ball4 = Ball(61, 75, 2.5, -pi/4, 'ro');
 ball5 = Ball(91, 16, 1.2, 15/7, 'ro');
 ball6 = Ball(53, 39, 0.7, 6*pi/3, 'ro');
