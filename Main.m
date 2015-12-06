@@ -1,20 +1,19 @@
 %main.m
 clf
-ball1 = Ball(30, 53, 2, 0, 'ro');
+ball1 = Ball(5, 53, 3.5, 0, 'ro');
 ball2 = Ball(50, 50, 0, 0, 'bo');
-ball3 = Ball(50, 56, 0, 0, 'go');
-ball4 = Ball(61, 75, 2.5, -pi/4, 'ro');
-ball5 = Ball(91, 16, 1.2, 15/7, 'ro');
-ball6 = Ball(53, 39, 0.7, 6*pi/3, 'ro');
-ball7 = Ball(27, 72, 0, -1, 'ro');
-ball8 = Ball(38, 81, 1.9, 74, 'ro');
-ball9 = Ball(71, 24, 1, 32, 'ro');
-ball10 = Ball(32, 11, 1, 64, 'ro');
-ball11 = Ball(7, 5, 1, 74, 'ro');
-ball12 = Ball(50, 91, 1, 13, 'ro');
+ball3 = Ball(54.3, 54.3, 0, 0, 'go');
+ball4 = Ball(54.3, 45.7, 0 ,0, 'ko');
+ball5 = Ball(58.6, 58.6, 0, 0, 'go');
+ball6 = Ball(58.6, 50, 0, 0, 'ko');
+ball7 = Ball(58.6, 41.4, 0, 0, 'ko');
+ball8 = Ball(62.9, 62.9, 0, 0, 'go');
+ball9 = Ball(62.9, 54.3, 0, 0, 'bo');
+ball10 = Ball(62.9, 45.7, 0, 0, 'yo');
+ball11 = Ball(62.9, 37.1, 0, 0, 'ro');
 
 hold on
-array = [ball1 ball2 ball3];% ball4]% ball5 ball6 ball7 ball8 ball9 ball10 ball11 ball12];
+array = [ball1 ball2 ball3]; %ball4 ball5 ball6 ball7 ball8 ball9 ball10 ball11];% ball12];
 
 axis([0 200 0 100]);
 
@@ -29,3 +28,11 @@ for i=1:200
        end
     end
 end
+
+num_pocketed = 0;
+for i=1:length(array)
+   if array(i).in_play 
+      num_pocketed = num_pocketed + 1;
+   end
+end
+num_pocketed;
