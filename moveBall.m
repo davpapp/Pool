@@ -1,5 +1,5 @@
 function ball = moveBall(ball)
-    ball.pos_x = ball.pos_x + ball.vx;
+    ball.pos_x = ball.pos_x + ball.vx / ;
     ball.pos_y = ball.pos_y + ball.vy;
     ball.vx = ball.vx*0.98;
     ball.vy = ball.vy*0.98;

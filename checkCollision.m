@@ -13,8 +13,8 @@ for i = 1:length(array)
                 
                 if (distance < array(i).radius*2)
 
-                    v1 = [array(i).vx array(i).vy]
-                    v2 = [array(j).vx array(j).vy]
+                    v1 = [array(i).vx array(i).vy];
+                    v2 = [array(j).vx array(j).vy];
                     x1 = [array(i).pos_x array(i).pos_y];
                     x2 = [array(j).pos_x array(j).pos_y];
                     den1 = norm(x1 - x2);
@@ -47,5 +47,8 @@ for q = 1:length(addIndexes)
     indexValue2 = addIndexes(q);
     array2(indexValue2).vx = array2(indexValue2).vx + addx(q);
     array2(indexValue2).vy = array2(indexValue2).vy + addy(q);
+    array2(indexValue2).vx;
+    array2(indexValue2).vy;
+    
 end
 end
