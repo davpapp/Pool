@@ -17,7 +17,7 @@ array = [ball1 ball2 ball3]; %ball4 ball5 ball6 ball7 ball8 ball9 ball10 ball11]
 
 axis([0 200 0 100]);
 
-for i=1:200
+while (~isOver(array))
     array = checkCollision(array);
     for j=1:length(array)
        if (array(j).in_play)
