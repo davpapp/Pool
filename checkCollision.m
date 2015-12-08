@@ -22,17 +22,17 @@ for i = 1:length(array)
                     v1prime = v1 - (x1 - x2) * dot(v1 - v2, x1 - x2) / den1^2;
                     v2prime = v2 - (x2 - x1) * dot(v2 - v1, x2 - x1) / den2^2;
                     
-%                     array2(i).vx = v1prime(1);
-%                     array2(i).vy = v1prime(2);
-%                     array2(j).vx = v2prime(1);
-%                     array2(j).vy = v2prime(2);             
+                     array2(i).vx = v1prime(1);
+                     array2(i).vy = v1prime(2);
+                     array2(j).vx = v2prime(1);
+                     array2(j).vy = v2prime(2);             
                     
-                    addIndexes(end + 1) = i;
-                    addx(end + 1) = v1prime(1);
-                    addy(end + 1) = v1prime(2);
-                    addIndexes(end + 1) = j; 
-                    addx(end + 1) = v2prime(1);
-                    addy(end + 1) = v2prime(2);
+                     addIndexes(end + 1) = i;
+                     addx(end + 1) = v1prime(1);
+                     addy(end + 1) = v1prime(2);
+                     addIndexes(end + 1) = j; 
+                     addx(end + 1) = v2prime(1);
+                     addy(end + 1) = v2prime(2);
                 end
             end
         end
@@ -45,8 +45,21 @@ for k = 1:length(addIndexes)
 end    
 for q = 1:length(addIndexes)
     indexValue2 = addIndexes(q);
-    array2(indexValue2).vx = array2(indexValue2).vx + addx(q);
-    array2(indexValue2).vy = array2(indexValue2).vy + addy(q);
+    
+    num = 0;
+    for e = 1:length(addIndexes)
+       if (indexValue2 == addIndexes(e))
+          num = num + 1; 
+       end
+    end
+    if (num > 1)
+        array2(indexValue2).vx = array2(indexValue2).vx - addx(q);
+        array2(indexValue2).vy = array2(indexValue2).vy - addy(q);
+    else
+        array2(indexValue2).vx = array2(indexValue2).vx + addx(q);
+        array2(indexValue2).vy = array2(indexValue2).vy + addy(q);
+    end
+    
     array2(indexValue2).vx;
     array2(indexValue2).vy;
     

@@ -4,7 +4,9 @@ hold on
 
 
 axis([0 200 0 100]);
-%res = break_sweep()
+DataAspectRatio = [1 1 1];
+
+array = reset_balls(3, 0.3);
+data = simulate_break(array)
+%res = break_sweep(array);
 %plot(res);
-array = reset_balls(3, 0);
-simulate_break(array);

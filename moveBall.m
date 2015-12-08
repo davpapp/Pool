@@ -1,8 +1,8 @@
 function ball = moveBall(ball, timestep)
     ball.pos_x = ball.pos_x + ball.vx / timestep;
     ball.pos_y = ball.pos_y + ball.vy / timestep;
-    ball.vx = ball.vx * 0.99 ;
-    ball.vy = ball.vy * 0.99;
+    ball.vx = ball.vx - ball.vx * 0.005 / timestep;
+    ball.vy = ball.vy - ball.vy * 0.005 / timestep;
     % v = sqrt(ball.vx^2 + ball.vy^2);
    % v = v * 0.99;
    % ball.vx = ball.vx * v / sqrt(ball.vx^2 + ball.vy^2);
