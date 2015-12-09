@@ -22,10 +22,10 @@ for i = 1:length(array)
                     v1prime = v1 - (x1 - x2) * dot(v1 - v2, x1 - x2) / den1^2;
                     v2prime = v2 - (x2 - x1) * dot(v2 - v1, x2 - x1) / den2^2;
                     
-                     array2(i).vx = v1prime(1);
-                     array2(i).vy = v1prime(2);
-                     array2(j).vx = v2prime(1);
-                     array2(j).vy = v2prime(2);             
+%                      array2(i).vx = v1prime(1);
+%                      array2(i).vy = v1prime(2);
+%                      array2(j).vx = v2prime(1);
+%                      array2(j).vy = v2prime(2);             
                     
                      addIndexes(end + 1) = i;
                      addx(end + 1) = v1prime(1);
