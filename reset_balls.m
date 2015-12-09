@@ -15,6 +15,6 @@ function array = reset_balls(vx, vy)
     ball14 = Ball(170, 50, 0, 0, 'ko');
     ball15 = Ball(170, 56, 0, 0, 'ko');
     ball16 = Ball(170, 62, 0, 0, 'ko');
-    array = [ball1 ball2 ball3 ball4];% ball5 ball6 ball7 ball8 ball9 ball10 ball11 ball12 ball13 ball14 ball15 ball16];
+    array = [ball1 ball2 ball3 ball4 ball5 ball6 ball7 ball8 ball9 ball10 ball11 ball12 ball13 ball14 ball15 ball16];
 end
 
